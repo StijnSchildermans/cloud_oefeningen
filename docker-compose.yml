@@ -1,0 +1,10 @@
+version: "3.3"
+services: 
+  layout:
+    build: ./layout
+    ports: 
+      - "4000:80"
+  pascal:
+    build: ./pascal
+    ports: 
+      - "80"
