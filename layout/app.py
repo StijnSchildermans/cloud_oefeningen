@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 
 def get_rows(start, end, buf):
-    triangle = json.loads(requests.get('http://172.17.0.1:3000/pascal.php?start=' + str(start) + '&end=' + str(end)).content)
+    triangle = json.loads(requests.get('http://pascal/pascal.php?start=' + str(start) + '&end=' + str(end)).content)
     for i in range(start,end):
         buf[i] = triangle[i - start]
 
